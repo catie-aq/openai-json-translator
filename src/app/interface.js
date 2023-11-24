@@ -81,8 +81,7 @@ export default function Interface() {
         <div className="text-white text-[2.5em] font-bold font-['Alegreya']">4. Copy the result</div>
         
         <div className="ml-10 flex text-white text-base font-normal font-['Cambay']"> 
-          <div className="">Résultat</div>
-          <div className="ml-4 cursor-pointer" onClick={() => {navigator.clipboard.writeText(output)}}>  COPIER </div>
+          <div className="">Result</div>
         </div>
         <input type="text" name="source" defaultValue={output} onChange={(event) => setOutput(event.target.value)}
           
