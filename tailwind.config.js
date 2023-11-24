@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: { 
+        cambay: ["Cambay", "sans-serif"], 
+        mukta: ["Mukta", "sans-serif"], 
+        Alegreya: ["Alegreya Sans", "sans-serif"], 
+        source: ["Source sans 3", "sans-serif"]
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
