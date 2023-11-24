@@ -1,0 +1,26 @@
+# docker-compose.yml 
+
+## Simple docker compose for current Dockerfile. 
+## Expose port 1337 
+
+## Doc 
+## https://docs.strapi.io/dev-docs/installation/docker
+
+version: '3.9'
+
+services:
+  app:
+    container_name: jsonconvert
+    build: .
+    command: bash -c "yarn install && yarn dev -p 3005"
+    
+    # image: strapi:latest
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - NODE_ENV=development
+      - PORT=3005
+    ports:
+      - "3005:3005"
+    volumes:
+      - .:/opt/app
